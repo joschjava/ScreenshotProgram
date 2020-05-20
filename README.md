@@ -5,7 +5,6 @@
 
 ## Copyright
 Icons used:
-
-https://icons8.com/icon/80316/stop
-https://icons8.com/icon/80424/record
-https://icons8.com/icon/56398/pictures-folder-filled
+- https://icons8.com/icon/80316/stop
+- https://icons8.com/icon/80424/record
+- https://icons8.com/icon/56398/pictures-folder-filled
