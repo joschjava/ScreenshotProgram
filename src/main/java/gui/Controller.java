@@ -238,31 +238,18 @@ public class Controller implements Initializable {
     public void createImageFolderTooltip() {
         final Tooltip tooltip = new Tooltip("Current: " + selectedFolder.getAbsolutePath());
         InnerShadow is = getInnerShadow();
-        ivFolder.setOnMouseEntered(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                // +15 moves the tooltip 15 pixels below the mouse cursor;
-                // if you don't change the y coordinate of the tooltip, you
-                // will see constant screen flicker
-                tooltip.show(ivFolder, event.getScreenX(), event.getScreenY() + 20);
-
-                addMouseEnteredEffect(ivFolder, is);
-            }
+        ivFolder.setOnMouseEntered(event -> {
+            tooltip.show(ivFolder, event.getScreenX(), event.getScreenY() + 20);
+            addMouseEnteredEffect(ivFolder, is);
         });
 
-        ivFolder.setOnMouseMoved(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                tooltip.setAnchorX(event.getScreenX());
-                tooltip.setAnchorY(event.getScreenY() + 20);
-            }
+        ivFolder.setOnMouseMoved(event -> {
+            tooltip.setAnchorX(event.getScreenX());
+            tooltip.setAnchorY(event.getScreenY() + 20);
         });
-        ivFolder.setOnMouseExited(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-                addMouseExitEffect(ivFolder, is);
-                tooltip.hide();
-            }
+        ivFolder.setOnMouseExited(event -> {
+            addMouseExitEffect(ivFolder, is);
+            tooltip.hide();
         });
     }
 
