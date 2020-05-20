@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="400.0" styleClass="background" stylesheets="@mainlayout.css"
+      xmlns="http://javafx.com/javafx/8" fx:controller="gui.Controller">
+    <children>
+        <HBox prefHeight="100.0" spacing="5.0">
+            <children>
+                <ImageView fx:id="ivRecord">
+                    <image>
+                        <Image url="@record2.png"/>
+                    </image>
+                    <effect>
+                        <InnerShadow choke="1.0" height="5.0" radius="2.0" width="5.0">
+                        </InnerShadow>
+                    </effect>
+                </ImageView>
+                <ImageView fx:id="ivFolder">
+                    <image>
+                        <Image url="@folder_ps.png"/>
+                    </image>
+                    <effect>
+                        <InnerShadow choke="1.0" height="5.0" radius="2.0" width="5.0"/>
+                    </effect>
+                </ImageView>
+                <StackPane fx:id="spInterval" alignment="TOP_CENTER" layoutX="84.0" layoutY="15.0">
+                    <children>
+                        <ImageView fitHeight="74.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@interval_ps.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lbInterval" alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="86.0"
+                               text="9999" textAlignment="RIGHT">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <InnerShadow choke="1.0" height="5.0" radius="2.0" width="5.0"/>
+                    </effect>
+                </StackPane>
+                <StackPane fx:id="spNrImages" alignment="TOP_CENTER">
+                    <children>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@image_nr.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="lbImagesTaken" alignment="CENTER_RIGHT" prefHeight="62.0" prefWidth="66.0"
+                               text="0" textAlignment="RIGHT">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                    <effect>
+                        <InnerShadow choke="1.0" height="5.0" radius="2.0" width="5.0"/>
+                    </effect>
+                </StackPane>
+                <ImageView fx:id="ivMove" fitHeight="61.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@move.png"/>
+                    </image>
+                    <effect>
+                        <InnerShadow choke="1.0" height="5.0" radius="2.0" width="5.0"/>
+                    </effect>
+                </ImageView>
+                <ImageView fx:id="ivExit" fitHeight="63.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@exit_ps.png"/>
+                    </image>
+                    <effect>
+                        <InnerShadow choke="1.0" height="5.0" radius="2.0" width="5.0"/>
+                    </effect>
+                </ImageView>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+        </HBox>
+        <Label fx:id="lbVideoSpeed" text="One Minute in video is xxx in real time at 30 fps."/>
+        <ImageView fx:id="imPostview" fitHeight="286.0" fitWidth="602.0" pickOnBounds="true" preserveRatio="true"/>
+    </children>
+    <effect>
+        <InnerShadow/>
+    </effect>
+    <opaqueInsets>
+        <Insets/>
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+</VBox>
